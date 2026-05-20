@@ -1,6 +1,7 @@
 {
   "version": 2,
-  "name": "spacex-s1-showcase",
+  "outputDirectory": ".",
+  "framework": null,
   "headers": [
     {
       "source": "/(.*)",
