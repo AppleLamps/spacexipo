@@ -5,7 +5,7 @@ import { initCharts } from './charts.js';
 
 function initNav() {
   const links = document.querySelectorAll('.nav-links a');
-  const sections = ['overview', 'glance', 'pillars', 'financials', 'road', 'leadership'];
+  const sections = ['glance', 'milestones', 'pillars', 'financials', 'road', 'risks', 'leadership'];
 
   const onScroll = () => {
     let current = '';

@@ -301,6 +301,134 @@
   line-height: 1.4;
 }
 
+/* Compact 2025 Scale Bar - additional data layer */
+.scale-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  border: 2px solid #3A3A3A;
+  background: #111;
+  padding: 10px;
+}
+.scale-item {
+  text-align: center;
+  padding: 6px 4px;
+  border-right: 1px solid #333;
+}
+.scale-item:last-child { border-right: none; }
+.scale-item .num {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.1;
+}
+.scale-item .lbl {
+  display: block;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* ========================================
+   MOBILE EXPERIENCE IMPROVEMENTS
+   ======================================== */
+@media (max-width: 768px) {
+  /* Tighter overall spacing */
+  .container { padding: 0 12px; }
+  section { padding: var(--space-l) 0; }
+
+  /* Stat grid - more compact */
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+  .stat {
+    padding: 10px 6px;
+    border-width: 2px;
+  }
+  .stat-value {
+    font-size: 1.35rem;
+  }
+  .stat-label {
+    font-size: 0.58rem;
+    margin-top: 2px;
+  }
+
+  /* 2025 Scale bar - 2 columns on mobile */
+  .scale-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    padding: 8px;
+  }
+  .scale-item .num { font-size: 1rem; }
+  .scale-item .lbl { font-size: 0.55rem; }
+
+  /* Milestones - horizontal scroll on mobile (better UX for timeline) */
+  .milestone-grid {
+    grid-template-columns: none;
+    display: flex;
+    overflow-x: auto;
+    gap: 8px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
+  .milestone {
+    min-width: 220px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    font-size: 0.82rem;
+    padding: 8px 10px;
+  }
+
+  /* Risks - slightly tighter */
+  .risk-grid {
+    gap: 8px;
+  }
+  .risk-card {
+    padding: 10px 12px;
+  }
+
+  /* Pillar tabs become more touch friendly */
+  .pillar-tab {
+    padding: 14px 8px;
+    font-size: 0.8rem;
+  }
+
+  /* Pillar inner content stacks better on mobile */
+  .pillar-panel > div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+  .pillar-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Financial tables - allow horizontal scroll */
+  .financial-grid table,
+  .financial-grid .scale-bar {
+    font-size: 0.8rem;
+  }
+
+  /* Nav - slightly smaller on mobile */
+  .nav-links {
+    gap: 14px;
+  }
+  .nav-links a {
+    font-size: 0.68rem;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+  .stat-value { font-size: 1.2rem; }
+  .milestone { min-width: 200px; }
+}
+
 .disclaimer {
   font-size: 0.72rem;
   color: #777;
