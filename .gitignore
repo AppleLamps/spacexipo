@@ -1,0 +1,22 @@
+# Vercel
+.vercel
+.vercel/
+
+# Node / tooling
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Local dev artifacts
+*.log
+dist/
+build/

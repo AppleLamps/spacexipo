@@ -1,0 +1,13 @@
+{
+  "name": "spacex-s1-showcase",
+  "version": "1.0.0",
+  "description": "Professional vanilla JS investor briefing site showcasing key information from Space Exploration Technologies Corp. (SpaceX) Form S-1 filed May 20, 2026.",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "preview": "npx serve . -p 8765",
+    "build": "echo 'Static site — no build step required'"
+  },
+  "keywords": ["spacex", "s-1", "ipo", "investor", "vanilla-js", "industrial-design"],
+  "author": "Generated from SEC filing data"
+}
