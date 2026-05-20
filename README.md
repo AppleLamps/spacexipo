@@ -42,6 +42,24 @@ Open http://localhost:8765
 
 Subsequent deploys: just `git push` (or `vercel --prod` for manual).
 
+### Vercel Configuration
+
+This project uses `vercel.json` with two important settings to ensure reliable static deployment:
+
+```json
+{
+  "outputDirectory": ".",
+  "framework": null
+}
+```
+
+- **`outputDirectory: "."`** — Tells Vercel to serve the site directly from the root of the project (where `index.html` lives).  
+- **`framework: null`** — Prevents Vercel from auto-detecting a frontend framework and incorrectly expecting a build output folder such as `public` or `dist`.
+
+If you ever see the error **"No Output Directory named 'public' found"**, this configuration resolves it.
+
+You can also set **Output Directory** to `.` manually in the Vercel project dashboard under **Settings → General** as an alternative.
+
 ## Project Structure
 
 ```
@@ -55,7 +73,7 @@ spacex-s1-showcase/
 │   ├── counters.js     # Animated spec-sheet numbers (IntersectionObserver)
 │   ├── tabs.js         # Pillar switcher (Space / Connectivity / AI)
 │   └── charts.js       # Pure-CSS/DOM subscriber growth + revenue mix
-├── vercel.json         # Production headers + caching (long-term immutable for assets)
+├── vercel.json         # Deployment config (outputDirectory, framework, headers & caching)
 ├── package.json        # Project metadata + `vercel dev`
 ├── .gitignore
 └── README.md
