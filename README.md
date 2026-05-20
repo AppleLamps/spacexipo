@@ -1,5 +1,7 @@
 # SpaceX S-1 Investor Showcase
 
+**Live site:** [https://spacexipo.vercel.app/](https://spacexipo.vercel.app/)
+
 Professional, self-contained vanilla JavaScript website highlighting the most important information from Space Exploration Technologies Corp.'s Form S-1 registration statement (filed with the SEC on May 20, 2026).
 
 - **Design philosophy**: Industrial Utility (condensed typography, thick steel borders, safety-yellow accents, spec-sheet data presentation)
